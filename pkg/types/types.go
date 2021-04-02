@@ -25,8 +25,17 @@ type Card struct {
 
 type Category string
 
+type Status string
+
+const (
+	StatusOk         Status = "OK"
+	StatusFail       Status = "FAIL"
+	StatusInProgress Status = "IINPROGRESS"
+)
+
 type Payment struct {
 	ID       int
 	Amount   Money
 	Category Category
+	Status   Status
 }
